@@ -110,6 +110,11 @@ export default {
           
         // },
         {
+            label: "Home",
+            to: "/",
+            icon: "material-symbols:home-outline-rounded",                 
+        },
+        {
             label: "Cart",
             to: "/cart",
             icon: "material-symbols:shopping-cart-outline-rounded",         
