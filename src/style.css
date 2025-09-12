@@ -1,0 +1,279 @@
+@import 'tailwindcss';
+
+@theme {
+
+  /* Brand / Primary */
+  --color-primary-100: #FFB347;
+  --color-primary-500: #FF7A00;
+  --color-primary-600: #E56A00;
+
+  /* Backgrounds */
+  --color-background: #FDFDFD;
+  --color-surface: #F5F5F5;
+
+  /* Text */
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #5C5C5C;
+
+  /* States */
+  --color-success: #27AE60;
+  --color-error: #E63946;
+  --color-warning: #FFC107;
+  --color-info: #3498DB;
+
+  --background-input: #FFFFFF;          /* input background */
+  --color-border: #D1D5DB;              /* neutral border */
+  --color-text: #1E1E1E;                /* input text */
+  --color-text-secondary: #6B7280;      /* placeholder text */
+  --color-surface-ground: #F5F5F5;      /* disabled background */
+  --color-primary: #FF7A00;             /* focus/hover highlight */
+
+  --color-card-bg: #FFFFFF;             /* card background */
+  --color-card-border: #E5E7EB;         /* neutral light border */
+  --color-card-shadow: rgba(0, 0, 0, 0.08); /* soft shadow */
+  --color-card-text: #1E1E1E;           /* primary text */
+  --color-card-text-secondary: #6B7280; /* secondary text */
+  --color-card-hover: #F9FAFB;          /* hover state */
+}
+
+
+/* === Dark Mode Overrides === */
+@layer base {
+  [data-theme='light'] {
+/* Brand / Primary */
+  --color-primary-100: #FFB347;
+  --color-primary-500: #FF7A00;
+  --color-primary-600: #E56A00;
+
+  /* Backgrounds */
+  --color-background: #FDFDFD;
+  --color-surface: #F5F5F5;
+
+  /* Text */
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #5C5C5C;
+
+  /* States */
+  --color-success: #27AE60;
+  --color-error: #E63946;
+  --color-warning: #FFC107;
+  --color-info: #3498DB;
+
+  --background-input: #FFFFFF;          /* input background */
+  --color-border: #D1D5DB;              /* neutral border */
+  --color-text: #1E1E1E;                /* input text */
+  --color-text-secondary: #6B7280;      /* placeholder text */
+  --color-surface-ground: #F5F5F5;      /* disabled background */
+  --color-primary: #FF7A00;             /* focus/hover highlight */
+
+  --color-card-bg: #FFFFFF;             /* card background */
+  --color-card-border: #E5E7EB;         /* neutral light border */
+  --color-card-shadow: rgba(0, 0, 0, 0.08); /* soft shadow */
+  --color-card-text: #1E1E1E;           /* primary text */
+  --color-card-text-secondary: #6B7280; /* secondary text */
+  --color-card-hover: #F9FAFB;          /* hover state */
+  }
+  [data-theme='dark'] {
+    /* Brand / Primary */
+  --color-primary-100: #FFB347;
+  --color-primary-500: #FF7A00;
+  --color-primary-600: #FF6F00;
+
+  /* Backgrounds */
+  --color-background: #121212;
+  --color-surface: #1E1E1E;
+
+  /* Text */
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #B3B3B3;
+
+  /* States */
+  --color-success: #2ECC71;
+  --color-error: #FF4D4F;
+  --color-warning: #FFD54F;
+  --color-info: #4FC3F7;
+
+  --background-input: #1E1E1E;          /* input background */
+  --color-border: #333333;              /* neutral border */
+  --color-text: #FFFFFF;                /* input text */
+  --color-text-secondary: #9CA3AF;      /* placeholder text */
+  --color-surface-ground: #2A2A2A;      /* disabled background */
+  --color-primary: #FF7A00;            /* focus/hover highlight */
+
+  --card-bg: #1E1E1E;             /* card background */
+  --card-border: #2C2C2C;         /* darker neutral border */
+  --card-shadow: rgba(0, 0, 0, 0.4); /* stronger shadow */
+  --card-text: #FFFFFF;           /* primary text */
+  --card-text-secondary: #9CA3AF; /* secondary text */
+  --card-hover: #2A2A2A;          /* hover state */
+  }
+}
+
+
+@layer base {
+  /* Scrollbar width */
+  *::-webkit-scrollbar {
+    width: 8px; /* vertical */
+    height: 8px; /* horizontal */
+  }
+
+  /* Scrollbar track */
+  *::-webkit-scrollbar-track {
+    background: var(--color-surface);
+  }
+
+  /* Scrollbar thumb */
+  *::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 9999px; /* rounded-full */
+  }
+
+  /* Scrollbar thumb hover */
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-hover, var(--color-primary));
+  }
+
+  /* ===== Theme-Specific Overrides ===== */
+  [data-theme='dark']::-webkit-scrollbar-track {
+    background: var(--color-surface);
+  }
+
+  [data-theme='dark']::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+  }
+
+  [data-theme='dark']::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-hover, var(--color-primary));
+  }
+}
+
+
+
+body{
+  background-color: var(--color-background);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* === Input Field Base === */
+.input {
+  @apply px-3 py-2 rounded-2xl
+         border border-[var(--color-border)]
+         bg-[var(--background-input)]
+         text-[var(--color-text)]
+         placeholder-[var(--color-text-secondary)]
+         transition-colors duration-75
+         outline-none;
+}
+
+/* === Hover === */
+.input:hover {
+  @apply border-[var(--color-primary)];
+}
+
+/* === Focus === */
+.input:focus {
+  @apply border-[var(--color-primary)]
+         shadow-2xl;
+}
+
+/* === Disabled === */
+.input:disabled {
+  @apply bg-[var(--color-surface-ground)]
+         text-[var(--color-text-secondary)]
+         opacity-60 cursor-not-allowed;
+}
+
+
+
+.card {
+  @apply rounded-2xl p-4
+         bg-[var(--card-bg)]
+         border border-[var(--card-border)]
+         text-[var(--card-text)]
+         shadow-md;
+  box-shadow: 0 2px 6px var(--card-shadow);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.card.hoverable:hover {
+  @apply bg-[var(--card-hover)]
+         border-[var(--color-primary)];
+  box-shadow: 0 4px 12px var(--card-shadow);
+}
+
+.card-title {
+  @apply text-lg font-semibold text-[var(--card-text)];
+}
+
+.card-subtitle {
+  @apply text-sm text-[var(--card-text-secondary)];
+}
+
+
+.router-link-active{
+@apply bg-primary text-white hover:bg-primary/80
+}
+
+/* Trigger Styles */
+.select {
+  @apply w-full px-3 py-2 rounded-2xl
+         border border-[var(--color-border)]
+         bg-[var(--background-input)]
+         text-[var(--color-text)]
+         transition-colors duration-75;
+}
+/* Focus border for select trigger */
+.select:focus {
+  @apply border-[var(--color-primary)] ring-2 ring-[var(--color-primary)]/30;
+}
+
+/* Only show ring when focused via keyboard, not mouse */
+.select:focus-visible {
+  @apply border-[var(--color-primary)] ring-2 ring-[var(--color-primary)]/30;
+}
+
+/* Animations */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+
+.btn-muted {
+  @apply border-[var(--color-card-border)] border-2 text-text hover:text-text hover:border-card-border/50
+         hover:bg-card-border/80
+         px-4 py-2 rounded-2xl cursor-pointer
+         disabled:opacity-60 disabled:cursor-not-allowed
+         transition-colors duration-150;
+}
+.btn-dangor {
+  @apply border-[var(--color-error)] border-2 text-text hover:text-white hover:border-error/50
+         hover:bg-error/80
+         px-4 py-2 rounded-2xl cursor-pointer
+         disabled:opacity-60 disabled:cursor-not-allowed
+         transition-colors duration-150;
+}
+.btn-primary {
+  @apply border-[var(--color-primary)] border-2 text-text hover:text-white hover:border-0
+         hover:bg-primary/50
+         px-4 py-2 rounded-2xl cursor-pointer
+         disabled:opacity-60 disabled:cursor-not-allowed
+         transition-colors duration-150;
+}
+
+.btn-secondary {
+  @apply bg-success/80 text-white
+         hover:bg-success
+         px-4 py-2 rounded-2xl cursor-pointer
+         disabled:opacity-60 disabled:cursor-not-allowed
+         transition-colors duration-150;
+}
