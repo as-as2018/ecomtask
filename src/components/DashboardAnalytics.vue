@@ -132,7 +132,7 @@ export default {
       this.cart.forEach((item, index) => {
         cumulativeItems += item.quantity;
         cumulativeCost += item.quantity * item.price;
-        labels.push(`Step ${index + 1}`);
+        labels.push(item.title);
         itemsData.push(cumulativeItems);
         costData.push(cumulativeCost);
       });

@@ -103,6 +103,7 @@ export default {
       this.filterBy=""
       this.sortBy=""
       this.reset()
+      this.fetchProducts()
     }
   },
 
