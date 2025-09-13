@@ -44,7 +44,7 @@
     </p> -->
 
     <!-- Actions -->
-    <div class="flex gap-2 mt-3">
+    <div class="flex justify-between gap-2">
       <button
         class="btn-primary"
         @click="viewDetails(product?.id)"
