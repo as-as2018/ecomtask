@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center flex-wrap  border border-gray-200 transform hover:-translate-y-2 hover:shadow-2xl shadow-2xs rounded-lg p-4 transition-shadow duration-300">
+  <div class="flex items-center flex-wrap  border-1 border-border transform hover:-translate-y-2 hover:shadow-2xl shadow-2xs rounded-lg p-4 transition-shadow duration-300">
     <!-- Image -->
     <img
       :src="item.thumbnail"

@@ -2,19 +2,19 @@
   <div class="p-6 space-y-6">
     <!-- Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="p-4 border-2 border-gray-200   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
+      <div class="p-4 border-2 border-border   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
         <h2 class="font-semibold">Average Product Price</h2>
         <p class="text-2xl font-bold text-cyan-600">
           ${{ averagePrice.toFixed(2) }}
         </p>
       </div>
-      <div class="p-4 border-2 border-gray-200   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
+      <div class="p-4 border-2 border-border   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
         <h2 class="font-semibold">Total Items</h2>
         <p class="text-2xl font-bold text-green-600">
           {{ totalItems }}
         </p>
       </div>
-      <div class="p-4 border-2 border-gray-200   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
+      <div class="p-4 border-2 border-border   bg-surface  shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded">
         <h2 class="font-semibold">Total Cost</h2>
         <p class="text-2xl font-bold text-orange-600">
           ${{ totalCost.toFixed(2) }}
@@ -24,7 +24,7 @@
 
     <!-- Charts -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="p-8 border-2 border-gray-200 bg-surface shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded h-80">
+      <div class="p-8 border-2 border-border  bg-surface shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded h-80">
         <h2 class="font-semibold mb-2">Items by Category</h2>
         <PieChart
           v-if="categoryData"
@@ -34,7 +34,7 @@
         <p v-else class="text-gray-500">No data available</p>
       </div>
 
-      <div class="p-8 border-2 border-gray-200 bg-surface shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded h-80">
+      <div class="p-8 border-2 border-border  bg-surface shadow-l hover:shadow-2xl translate hover:-translate-y-2 transition-translate duration-75 rounded h-80">
         <h2 class="font-semibold mb-2">Items vs Cost Trend</h2>
         <LineChart
           v-if="trendData"

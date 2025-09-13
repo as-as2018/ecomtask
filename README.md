@@ -1,6 +1,6 @@
 # EcomTask
 
-An e-commerce application built with Vue 3, designed to provide a seamless shopping experience with features like product browsing, cart management, wishlist, user authentication, and analytics dashboard.
+An e-commerce application built with Vue 3, designed to provide a seamless shopping experience with features like product browsing, cart management, wishlist and analytics dashboard.
 
 ## Features
 
@@ -13,7 +13,7 @@ An e-commerce application built with Vue 3, designed to provide a seamless shopp
 
 ## Tech Stack
 
-- **Frontend Framework**: Vue 3 (Composition API)
+- **Frontend Framework**: Vue 3 (Option API)
 - **Build Tool**: Vite
 - **Styling**: Tailwind CSS
 - **State Management**: Pinia with persistence
@@ -63,10 +63,10 @@ src/
 
 ## Approach
 
-This application follows a modern Vue 3 architecture using the Composition API for better code organization and reusability. Key design decisions include:
+This application follows a modern Vue 3 architecture using the Option API for better code organization and reusability. Key design decisions include:
 
 - **Component-Based Architecture**: Modular components for maintainability
-- **Centralized State Management**: Pinia stores for cart, auth, products, and theme
+- **Centralized State Management**: Pinia stores for cart,products, and theme
 - **API Layer**: Separated API logic for better testing and maintainability
 - **Responsive Design**: Tailwind CSS for consistent, mobile-first styling
 - **Performance**: Vite for fast development and optimized builds
